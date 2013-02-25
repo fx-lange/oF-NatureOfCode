@@ -1,18 +1,31 @@
 #include "testApp.h"
 
+#include "RandomWalker.h"
+
+RandomWalker walker;
+RandomMouseWalker mouseWalker;
+
 //--------------------------------------------------------------
 void testApp::setup(){
+	ofBackground(255);
+	ofSetBackgroundAuto(false);
 
+	walker.setup();
+	mouseWalker.setup();
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-
+	walker.update();
+	mouseWalker.update();
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-
+	ofSetColor(0);
+	walker.draw();
+	ofSetColor(255,0,0);
+	mouseWalker.draw();
 }
 
 //--------------------------------------------------------------
