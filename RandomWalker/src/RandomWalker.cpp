@@ -39,8 +39,16 @@ void RandomMouseWalker::update(){
 
 // ----- RandomStepsWalker
 
-void RandomStepsWalker::update(){
-	float stepSize = ofRandom(0,10);
+void RandomStepSizeWalker::update(){
+	float range = 5;
+	float stepSize, dice;
+
+	//custom probability distributed step size (like monte carlo)
+	//likelihood of a step size equals its squared value
+	do{
+		stepSize = ofRandom(0,range);
+		dice = ofRandom(0,range*range);
+	}while(dice > stepSize * stepSize);
 
 	x += ofRandom(-stepSize,stepSize);
 	y += ofRandom(-stepSize,stepSize);

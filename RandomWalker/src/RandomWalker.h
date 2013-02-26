@@ -17,7 +17,8 @@ public:
 	void update();
 };
 
-class RandomStepsWalker : public RandomWalker{
+class RandomStepSizeWalker : public RandomWalker{
+public:
 	void update();
 };
 

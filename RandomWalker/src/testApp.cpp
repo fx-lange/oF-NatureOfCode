@@ -4,7 +4,7 @@
 
 RandomWalker walker;
 RandomMouseWalker mouseWalker;
-RandomStepsWalker stepsWalker;
+RandomStepSizeWalker stepsWalker;
 
 //--------------------------------------------------------------
 void testApp::setup(){
