@@ -13,7 +13,7 @@ void RandomWalker::update(){
 }
 
 void RandomWalker::draw(){
-	ofCircle(x,y,1);
+	ofCircle(x,y,2);
 }
 
 // ----- RandomMouseWalker

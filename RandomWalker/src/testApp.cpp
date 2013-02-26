@@ -7,8 +7,9 @@ RandomMouseWalker mouseWalker;
 
 //--------------------------------------------------------------
 void testApp::setup(){
-	ofBackground(255);
+	ofBackground(0);
 	ofSetBackgroundAuto(false);
+	ofEnableAlphaBlending();
 
 	walker.setup();
 	mouseWalker.setup();
@@ -22,7 +23,9 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	ofSetColor(0);
+	ofSetColor(0,0,0,15);
+	ofRect(0,0,ofGetWidth(),ofGetHeight());
+	ofSetColor(255);
 	walker.draw();
 	ofSetColor(255,0,0);
 	mouseWalker.draw();
