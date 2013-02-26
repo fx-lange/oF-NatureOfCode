@@ -4,6 +4,7 @@
 
 RandomWalker walker;
 RandomMouseWalker mouseWalker;
+RandomStepsWalker stepsWalker;
 
 //--------------------------------------------------------------
 void testApp::setup(){
@@ -13,12 +14,14 @@ void testApp::setup(){
 
 	walker.setup();
 	mouseWalker.setup();
+	stepsWalker.setup();
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
 	walker.update();
 	mouseWalker.update();
+	stepsWalker.update();
 }
 
 //--------------------------------------------------------------
@@ -29,6 +32,8 @@ void testApp::draw(){
 	walker.draw();
 	ofSetColor(255,0,0);
 	mouseWalker.draw();
+	ofSetColor(0,255,0);
+	stepsWalker.draw();
 }
 
 //--------------------------------------------------------------

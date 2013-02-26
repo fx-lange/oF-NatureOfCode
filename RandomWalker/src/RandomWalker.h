@@ -16,4 +16,9 @@ class RandomMouseWalker : public RandomWalker{
 public:
 	void update();
 };
+
+class RandomStepsWalker : public RandomWalker{
+	void update();
+};
+
 #endif /* RANDOMWALKER_H_ */

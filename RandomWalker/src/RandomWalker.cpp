@@ -37,3 +37,12 @@ void RandomMouseWalker::update(){
 	}
 }
 
+// ----- RandomStepsWalker
+
+void RandomStepsWalker::update(){
+	float stepSize = ofRandom(0,10);
+
+	x += ofRandom(-stepSize,stepSize);
+	y += ofRandom(-stepSize,stepSize);
+}
+
