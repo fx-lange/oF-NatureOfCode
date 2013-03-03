@@ -2,9 +2,18 @@
 
 #include "RandomWalker.h"
 
+/*	TODO
+ * 	gaussian walker
+ * 	perlin walker
+ * 	ui to toggle different walkers
+ * 	explain mouseWalker visually
+ */
+
 RandomWalker walker;
 RandomMouseWalker mouseWalker;
 RandomStepSizeWalker stepsWalker;
+PerlinLocWalker perlinLocWalker;
+PerlinStepSizeWalker perlinStepWalker;
 
 //--------------------------------------------------------------
 void testApp::setup(){
@@ -15,6 +24,8 @@ void testApp::setup(){
 	walker.setup();
 	mouseWalker.setup();
 	stepsWalker.setup();
+	perlinLocWalker.setup();
+	perlinStepWalker.setup();
 }
 
 //--------------------------------------------------------------
@@ -22,18 +33,29 @@ void testApp::update(){
 	walker.update();
 	mouseWalker.update();
 	stepsWalker.update();
+	perlinLocWalker.update();
+	perlinStepWalker.update();
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
 	ofSetColor(0,0,0,15);
 	ofRect(0,0,ofGetWidth(),ofGetHeight());
+
 	ofSetColor(255);
 	walker.draw();
+
 	ofSetColor(255,0,0);
 	mouseWalker.draw();
+
 	ofSetColor(0,255,0);
 	stepsWalker.draw();
+
+	ofSetColor(0,0,255);
+	perlinLocWalker.draw();
+
+	ofSetColor(255,255,0);
+	perlinStepWalker.draw();
 }
 
 //--------------------------------------------------------------

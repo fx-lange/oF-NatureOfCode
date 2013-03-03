@@ -22,4 +22,17 @@ public:
 	void update();
 };
 
+class PerlinLocWalker : public RandomWalker{
+public:
+	float tx,ty;
+	void setup();
+	void update();
+};
+
+class PerlinStepSizeWalker : public PerlinLocWalker{
+public:
+	void update();
+};
+
+//gaussian distributed
 #endif /* RANDOMWALKER_H_ */

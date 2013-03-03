@@ -54,3 +54,31 @@ void RandomStepSizeWalker::update(){
 	y += ofRandom(-stepSize,stepSize);
 }
 
+// ----- PerlinNoiseWalker
+
+void PerlinLocWalker::setup(){
+	RandomWalker::setup();
+	tx = 0;
+	ty = 10000;
+}
+
+void PerlinLocWalker::update(){
+	x = ofMap(ofNoise(tx),0,1,0,ofGetWidth());
+	y = ofMap(ofNoise(ty),0,1,0,ofGetHeight());
+
+	tx += 0.01;
+	ty += 0.01;
+}
+
+// ----- PerlinStepSizeWalker
+
+void PerlinStepSizeWalker::update(){
+	x += ofMap(ofNoise(tx),0,1,-10,10);
+	y += ofMap(ofNoise(ty),0,1,-10,10);
+
+
+
+	tx += 0.01;
+	ty += 0.01;
+}
+
