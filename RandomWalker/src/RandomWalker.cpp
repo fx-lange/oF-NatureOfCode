@@ -76,8 +76,6 @@ void PerlinStepSizeWalker::update(){
 	x += ofMap(ofNoise(tx),0,1,-10,10);
 	y += ofMap(ofNoise(ty),0,1,-10,10);
 
-
-
 	tx += 0.01;
 	ty += 0.01;
 }

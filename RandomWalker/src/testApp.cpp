@@ -4,7 +4,6 @@
 
 /*	TODO
  * 	gaussian walker
- * 	perlin walker
  * 	ui to toggle different walkers
  * 	explain mouseWalker visually
  */
