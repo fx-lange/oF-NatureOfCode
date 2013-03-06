@@ -4,3 +4,6 @@ PerlinNoise2-4D/bin
 PerlinNoise2-4D/obj
 Motion101/bin
 Motion101/obj
+*/.c*
+*/.p*
+*/.s*
