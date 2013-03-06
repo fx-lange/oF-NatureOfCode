@@ -5,6 +5,7 @@
 void RandomWalker::setup(){
 	x = ofGetWidth()/2.f;
 	y = ofGetHeight()/2.f;
+	bShow = true;
 }
 
 void RandomWalker::update(){
@@ -13,7 +14,12 @@ void RandomWalker::update(){
 }
 
 void RandomWalker::draw(){
-	ofCircle(x,y,2);
+	if(bShow)
+		ofCircle(x,y,2);
+}
+
+void RandomWalker::toggleDraw(){
+	bShow = !bShow;
 }
 
 // ----- RandomMouseWalker

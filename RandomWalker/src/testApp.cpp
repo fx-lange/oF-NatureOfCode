@@ -55,11 +55,37 @@ void testApp::draw(){
 
 	ofSetColor(255,255,0);
 	perlinStepWalker.draw();
+
+	string str = "press 1 - 5 to toggle different walker:\n";
+	str += "1: default random walker \n";
+	str += "2: walker using center to mouse direction\n";
+	str += "3: random step size walker\n";
+	str += "4: walker with perlin noise positions\n";
+	str += "5: walker with perlin step size\n";
+
+	ofSetColor(255);
+	ofDrawBitmapString(str,10,20);
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-
+	switch(key){
+	case '1':
+		walker.toggleDraw();
+		break;
+	case '2':
+		mouseWalker.toggleDraw();
+		break;
+	case '3':
+		stepsWalker.toggleDraw();
+		break;
+	case '4':
+		perlinLocWalker.toggleDraw();
+		break;
+	case '5':
+		perlinStepWalker.toggleDraw();
+		break;
+	}
 }
 
 //--------------------------------------------------------------

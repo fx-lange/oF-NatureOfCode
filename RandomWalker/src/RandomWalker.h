@@ -8,7 +8,9 @@ public:
 	void setup();
 	void update();
 	void draw();
+	void toggleDraw();
 protected:
+	bool bShow;
 	float x,y;
 };
 
