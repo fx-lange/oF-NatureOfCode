@@ -51,3 +51,38 @@ void PerlinAccMover::update(){
 	Mover::update();
 }
 
+// ----- MouseMover
+
+void MouseMover::update(){
+	ofVec3f dir(ofGetMouseX(),ofGetMouseY());
+	dir -= pos;
+	dir.normalize();
+	dir *= 0.5;
+	acc.set(dir);
+	Mover::update();
+}
+
+// ----- MouseFarFastMover
+
+void MouseFarFastMover::update(){
+	ofVec3f dir(ofGetMouseX(),ofGetMouseY());
+	dir -= pos;
+	float squaredMag = dir.lengthSquared();
+	dir.normalize();
+	dir *= ofMap(squaredMag,0,ofGetWidth()*ofGetWidth()+ofGetHeight()+ofGetHeight(),0,3);
+	acc.set(dir);
+	Mover::update();
+}
+
+// ----- MouseCloseFastMover
+
+void MouseCloseFastMover::update(){
+	ofVec3f dir(ofGetMouseX(),ofGetMouseY());
+	dir -= pos;
+	float squaredMag = dir.lengthSquared();
+	dir.normalize();
+	dir *= ofMap(squaredMag,0,ofGetWidth()*ofGetWidth()+ofGetHeight()+ofGetHeight(),2,0);
+	acc.set(dir);
+	Mover::update();
+}
+

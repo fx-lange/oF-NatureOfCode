@@ -5,6 +5,9 @@
 Mover mover;
 RandomAccMover randomMover;
 PerlinAccMover perlinMover;
+MouseMover mouseMover;
+MouseFarFastMover farFastMover;
+MouseCloseFastMover closeFastMover;
 
 //--------------------------------------------------------------
 void testApp::setup(){
@@ -16,6 +19,9 @@ void testApp::setup(){
 	mover.setup(ofColor(255,0,0));
 	randomMover.setup(ofColor(0,255,0));
 	perlinMover.setup(ofColor(0,0,255));
+	mouseMover.setup(ofColor(255,255,0));
+	farFastMover.setup(ofColor(255,200,50));
+	closeFastMover.setup(ofColor(200,255,50));
 }
 
 //--------------------------------------------------------------
@@ -23,6 +29,9 @@ void testApp::update(){
 	mover.update();
 	randomMover.update();
 	perlinMover.update();
+	mouseMover.update();
+	farFastMover.update();
+	closeFastMover.update();
 }
 
 //--------------------------------------------------------------
@@ -34,6 +43,9 @@ void testApp::draw(){
 	mover.draw();
 	randomMover.draw();
 	perlinMover.draw();
+	mouseMover.draw();
+	farFastMover.draw();
+	closeFastMover.draw();
 }
 
 //--------------------------------------------------------------

@@ -28,4 +28,19 @@ public:
 	void update();
 };
 
+class MouseMover : public Mover{
+public:
+	void update();
+};
+
+class MouseFarFastMover : public Mover{
+public:
+	void update();
+};
+
+class MouseCloseFastMover : public Mover{
+public:
+	void update();
+};
+
 #endif /* MOVER_H_ */
